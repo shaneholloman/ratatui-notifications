@@ -224,7 +224,7 @@ The generated code only includes non-default values, keeping it minimal and clea
 
 ## API Documentation
 
-See [API.md](API.md) for the complete API reference.
+See [docs/API.md](docs/API.md) for the complete API reference.
 
 ## License
 
