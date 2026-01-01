@@ -67,6 +67,15 @@ impl Notifications {
         }
     }
 
+    /// Check if there is anything to be rendered, this is helpful for applications
+    /// that generally have a low frame rate but want to speed that up when displaying
+    /// a notification to enable smooth animations.
+    pub fn has_notification(&self) -> bool {
+        self.states
+            .iter()
+            .any(|(_, v)| v.current_phase != crate::notifications::types::AnimationPhase::Finished)
+    }
+
     /// Sets the maximum number of concurrent notifications per anchor.
     ///
     /// # Arguments
